@@ -1,0 +1,12 @@
+.wrap:hover .seek{
+    /* background: #f1f7ee; */
+    /* z-index: 10; */
+    scale: 1;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.wrap:hover{
+    filter:grayscale(0.1) brightness(0.9);
+    z-index: 0;
+}

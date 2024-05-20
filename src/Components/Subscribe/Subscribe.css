@@ -1,0 +1,11 @@
+.left{
+    background-image: url('src/images/partner-left-bg.png');
+    background-repeat: no-repeat;
+    /* background-position: left;    */
+    
+}
+.right{
+    background-image: url('src/images/partner-right-bg.png');
+    background-repeat: no-repeat;
+    /* background-position: right; */
+}

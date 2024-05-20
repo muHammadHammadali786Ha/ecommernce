@@ -1,0 +1,8 @@
+.banner{
+    background-image: url('src/images/partner-left-bg.png');
+    background-repeat: no-repeat;
+}
+
+.div{
+    background-color: hsl(155, 15.8%, 85.1%);
+}

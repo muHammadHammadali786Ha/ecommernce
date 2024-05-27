@@ -2,6 +2,8 @@
 import { useContext } from "react"
 import { topProduct } from "../../assets/assets"
 import { StoreContext } from "../Context/Store"
+import { Link } from "react-router-dom"
+
 const Product = () => {
     const {addCount} = useContext(StoreContext);
   return (
@@ -16,7 +18,7 @@ const Product = () => {
         {
             topProduct.map((i) => {
                 return (
-
+                    <Link to={`/detail/${i.id}`} key={i.id}>
                     <div key={i.id} className="flex flex-col justify-center items-center gap-[1rem] bg-[#f1f7ee] py-6 w-full h-[26rem] hover:border-[2px] duration-300 transition-all hover:border-green-700 rounded-md shadow-lg ">
                         <div className="">
                             <img className=" sm:w-[6rem] md:w-[10rem] " src={i.img} alt="" />
@@ -31,6 +33,7 @@ const Product = () => {
                         
                         
                     </div>
+                        </Link>
 
                 )
             })

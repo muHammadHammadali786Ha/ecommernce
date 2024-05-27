@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink, Navigate, NavigationType } from 'react-router-dom'
 import { brand } from '../../assets/assets'
 
 // logo 
@@ -8,6 +8,7 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { FaRegHeart } from "react-icons/fa6";
 import { FaHeart } from 'react-icons/fa';
 import { StoreContext } from '../Context/Store';
+import { RiDropdownList } from 'react-icons/ri';
 
 const Navbar = () => {
   const [navCall ,setNavCall] = useState(false);
@@ -28,7 +29,7 @@ const Navbar = () => {
       <div className="hidden lg:flex gap-8 text-[1.1rem] font-bold">
         <Link to="/" className='hover:text-green-800' >Home</Link>
         <Link to="/" className='hover:text-green-800' >About</Link>
-        <Link to="/" className='hover:text-green-800' >Product</Link>
+        <Link to="/product" className='hover:text-green-800' >Product</Link>
         <Link to="/contact" className='hover:text-green-800' >Contact</Link>
       </div>
 
@@ -52,7 +53,10 @@ const Navbar = () => {
                 </div>
               </div>
             </Link>
-
+            <div>
+              
+               
+            </div>
           </div>
           <div></div>
           <div></div>

@@ -23,6 +23,7 @@ import Cart from './Components/Cart/Cart.jsx';
 import Contact from './Components/Pages/Contact.jsx';
 import Register from './Components/Register/Register.jsx';
 import Login from './Components/Register/Login.jsx';
+import ProductLayout from './Components/Layout/ProductLayout.jsx';
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/reg' element={<Register/>}/>
           <Route path='/login' element={<Login/>}/>
+          <Route path='/product' element={<ProductLayout/>}/>
         </Routes>
       <Footer/>
       <Bottom/>

@@ -49,6 +49,12 @@ const StoreProvider = (props) => {
         // localStorage.setItem("carte",JSON.stringify(count))
     }
 
+    const removeCount = (id) =>{
+        setCount((prev)=>({...prev,[id]:prev[id]-1}))
+        localStorage.setItem("carte",JSON.stringify(count));
+        getTotal();
+    }
+
     
     const getTotalCartAmount = () => {
         
@@ -73,6 +79,7 @@ const StoreProvider = (props) => {
         setLoginUser,
         loginNow,
         setLoginNow,
+        removeCount,
     }
 
     useEffect(()=>{

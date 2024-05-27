@@ -25,8 +25,8 @@ const Login = () => {
         formData.append("email",data.email)
         formData.append("password",data.password)
         const res = await axios.post('http://127.0.0.1:8000/api/login/',formData);
-        console.log(res);
-        if (!res.data.error) {
+        console.log(res.data);
+        if (res.data) {
             setLoginUser(res.data.email);
             // setLoginNow(res.data.email);
             navigator('/');

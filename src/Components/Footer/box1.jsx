@@ -1,9 +1,29 @@
 // import React from 'react'
 
-import { brand } from "../../assets/assets"
 
+// import { brand } from "../../assets/assets"
+import { TfiTwitter } from "react-icons/tfi"
+import { BsSkype } from "react-icons/bs"
+import { LiaLinkedin } from "react-icons/lia"
+import { FaFacebookF } from "react-icons/fa6"
+
+FaFacebookF
 // import { BsFacebook } from 'react-icons/bs';
 const box1 = () => {
+    const socialLinks = [
+        {
+            logo: <FaFacebookF />
+        },
+        {
+            logo: <TfiTwitter />
+        },
+        {
+            logo: <BsSkype />
+        },
+        {
+            logo: <LiaLinkedin />
+        },
+    ]
     return (
         <div className="flex flex-col gap-6">
 
@@ -14,21 +34,20 @@ const box1 = () => {
             </p>
 
             <div className="flex gap-3">
-                <div className="w-[2rem] h-[2rem] border-[1px] border-gray-400 flex justify-center rounded-full hover:border-green-500">
-                    <img src={brand.fb} alt="" width="20rem" />
-                </div>
+                {
+                    socialLinks.map((i,index) => {
+                        return (
+                            <div key={index} className="w-[2rem] h-[2rem] border-[1px] border-gray-400 flex justify-center items-center rounded-full hover:border-green-500">
+                               <p className="hover:text-green-600">
 
-                <div className="w-[2rem] h-[2rem] border-[1px] border-gray-400 flex justify-center rounded-full hover:border-green-500">
-                    <img src={brand.tw} alt="" width="20rem" />
-                </div>
+                               {i.logo}
+                               </p>
+                            </div>
+                        )
+                    })
+                }
 
-                <div className="w-[2rem] h-[2rem] border-[1px] border-gray-400 flex justify-center rounded-full hover:border-green-500">
-                    <img src={brand.skype} alt="" width="20rem" />
-                </div>
 
-                <div className="w-[2rem] h-[2rem] border-[1px] border-gray-400 flex justify-center rounded-full hover:border-green-500">
-                    <img src={brand.ld} alt="" width="20rem" />
-                </div>
             </div>
 
         </div>

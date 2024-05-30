@@ -23,6 +23,7 @@ import test2 from '../images/testimonial-2.jpg'
 import test3 from '../images/testimonial-3.jpg'
 
 import ctaBg from '../images/cta-bg.png'
+import upload from './upload_area.png'
 
 import partner1 from '../images/partner-1.png';
 import partner2 from '../images/partner-2.png';
@@ -59,6 +60,7 @@ export const brand ={
     search,
     bag,
     ctaBg,
+    upload,
 }
 
 

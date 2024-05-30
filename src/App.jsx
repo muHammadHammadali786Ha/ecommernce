@@ -15,6 +15,11 @@ import Register from './Components/Register/Register.jsx';
 import Login from './Components/Register/Login.jsx';
 import ProductLayout from './Components/Layout/ProductLayout.jsx';
 import Detail from './Components/Products/Detail.jsx';
+import Admin from './Components/Admin/Admin.jsx';
+import Add from './Components/Admin/Add.jsx';
+import List from './Components/Admin/List.jsx';
+import Update from './Components/Admin/Update.jsx';
+
 
 const App = () => {
   return (
@@ -30,6 +35,11 @@ const App = () => {
           <Route path='/login' element={<Login/>}/>
           <Route path='/product' element={<ProductLayout/>}/>
           <Route path='/detail/:id' element={<Detail/>}/>
+          <Route path='/admin' element={<Admin/>}/>
+          <Route path='/admin/add' element={<Admin add={<Add/>}/>}/>
+          <Route path='/admin/list' element={<Admin add={<List/>}/>}/>
+          <Route path='/update/:id' element={<Admin add={<Update/>}/>}/>
+
         </Routes>
       <Footer/>
       <Bottom/>

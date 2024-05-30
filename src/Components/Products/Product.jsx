@@ -1,10 +1,20 @@
 // import React from 'react'
-import { useContext } from "react"
+import  { useContext, useEffect } from "react"
 import { topProduct } from "../../assets/assets"
 import { StoreContext } from "../Context/Store"
 import { Link } from "react-router-dom"
-
+import { AOS } from "aos"
+import "aos/dist/aos.css";
 const Product = () => {
+
+    useEffect(()=>{
+        AOS.init({
+            offset:100,
+            duration:800,
+            easing:"ease in-sine",
+            delay: 100,
+        });
+    },[]);
     const {addCount} = useContext(StoreContext);
   return (
     <div className=" px-[3rem] md:px-[6rem] flex flex-col gap-20 mt-8">
@@ -13,7 +23,7 @@ const Product = () => {
         <p className="text-gray-700 text-2xl md:text-4xl font-semibold">All Organic Products</p>
     </div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mmd:grid-cols-4  gap-[2rem] ">
+    <div data-aos="fade-up" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mmd:grid-cols-4  gap-[2rem] ">
 
         {
             topProduct.map((i) => {
